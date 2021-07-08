@@ -17,16 +17,16 @@ async function main(){
         const page = await browser.newPage();
         await page.goto('https://tierlist.gg/champions/KogMaw/Build');
 
-        const spells = getSpells(page);
-        const startingItems = getStartingItems(page);
-        const endGameItems = getEndgameItems(page);
-        const primaryRunes = getPrimaryRunes(page);
-        const secondaryRunes = getSecondaryRunes(page);
+        const spells = await getSpells(page);
+        const startingItems = await getStartingItems(page);
+        const endGameItems = await getEndgameItems(page);
+        const primaryRunes = await getPrimaryRunes(page);
+        const secondaryRunes = await getSecondaryRunes(page);
         
         await page.goto('https://tierlist.gg/champions/KogMaw/ADC/Counter');
 
-        const counteredChampions = getCounteredChampions(page);
-        const counterChampions = getCounterChampions(page);
+        const counteredChampions = await getCounteredChampions(page);
+        const counterChampions = await getCounterChampions(page);
         
         await browser.close();
 

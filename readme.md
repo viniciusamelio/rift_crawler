@@ -5,6 +5,6 @@ do game League of Legends.
 ## Todo:
 - Refatorar código para uma estrutura clean -> Done;
 - Interfacear e abstrair entidades e objetos -> Done;
-- Montar a lógica para coletar todos os dados de todos os champions e semear o banco com eles;
+- Montar a lógica para coletar todos os dados de todos os champions e semear o banco com eles -> Done;
 - Adicionar outras opções de Scrapping além da atual;
 - Montar um job cronológico para salvar os dados coletados numa base.

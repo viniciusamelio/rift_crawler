@@ -1,6 +1,6 @@
 import { Page } from "puppeteer";
 
-const getChampionData = async(page: Page)=>await page.evaluate(()=>{
+const getChampionData = async(page: Page) : Promise<Champion> =>await page.evaluate(()=>{
 
     const portraitContainer = document.querySelector('.ChampProfile-hero-portrait img');
     const portrait = portraitContainer?.attributes.getNamedItem('data-src')?.value;

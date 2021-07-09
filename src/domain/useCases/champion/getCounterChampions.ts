@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
-import CounterChampion from "../../../data/champion/counterChampionInterface";
+import CounterChampion from "../../../data/entities/champion/counterChampionInterface";
 
-const getCounterChampions = async(page: Page)=>await page.evaluate(()=>{
+const getCounterChampions = async(page: Page) : Promise<Array<CounterChampion>>=>await page.evaluate(()=>{
     const container = document.querySelectorAll('.ChampProfile-counter-inner div.w-full')[1];
     const championsSet : CounterChampion[] = [];
     container?.querySelectorAll('.counterList a').forEach(a=>{

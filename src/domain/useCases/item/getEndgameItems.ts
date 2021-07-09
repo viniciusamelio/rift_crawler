@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
-import Item from "../../../data/item/itemInterface";
+import Item from "../../../data/entities/item/itemInterface";
 
-const getEndgameItems = async(page: Page)=> await page.evaluate(()=>{
+const getEndgameItems = async(page: Page) : Promise<Array<Item>>=> await page.evaluate(()=>{
     const container = document.querySelector('.ChampProfile-build-winrate');
     const endGameSet : Item[] = [];
     container?.querySelectorAll('img').forEach(img=>{

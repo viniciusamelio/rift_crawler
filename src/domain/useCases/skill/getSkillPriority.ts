@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
-import Skill from "../../../data/skill/skillInterface";
+import Skill from "../../../data/entities/skill/skillInterface";
 
-const getSkillPriority = async(page:Page) => await page.evaluate(()=>{
+const getSkillPriority = async(page:Page) : Promise<Array<Skill>> => await page.evaluate(()=>{
     const container = document.querySelector('.ChampProfile-abilities-order .flex');
     const skillPriority : Skill[] = [];
     container?.querySelectorAll('.skill').forEach((div)=>{

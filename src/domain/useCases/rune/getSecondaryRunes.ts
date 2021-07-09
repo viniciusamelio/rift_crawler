@@ -1,7 +1,7 @@
 import { Page } from "puppeteer";
-import RuneSet from "../../../data/rune/runeSetInterface";
+import RuneSet from "../../../data/entities/rune/runeSetInterface";
 
-const getSecondaryRunes = async(page: Page)=> await page.evaluate(()=>{
+const getSecondaryRunes = async(page: Page) : Promise<RuneSet>=> await page.evaluate(()=>{
     const container = document.querySelectorAll('.ChampProfile-runes .ChampProfile-runes-path')[1];
     const runesSet : RuneSet = {perkName : container?.querySelector('.perk-title .h4')?.textContent ,
     src: container?.querySelector('.perk-image img')?.attributes.getNamedItem('data-src')?.value,

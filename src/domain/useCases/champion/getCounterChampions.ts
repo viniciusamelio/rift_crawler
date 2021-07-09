@@ -1,9 +1,9 @@
 import { Page } from "puppeteer";
-import Champion from "../../../data/champion/championInterface";
+import CounterChampion from "../../../data/champion/counterChampionInterface";
 
 const getCounterChampions = async(page: Page)=>await page.evaluate(()=>{
     const container = document.querySelectorAll('.ChampProfile-counter-inner div.w-full')[1];
-    const championsSet : Champion[] = [];
+    const championsSet : CounterChampion[] = [];
     container?.querySelectorAll('.counterList a').forEach(a=>{
         championsSet.push({
             name: a.querySelector('img')?.attributes.getNamedItem('alt')?.value,

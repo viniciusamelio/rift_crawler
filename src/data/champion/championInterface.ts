@@ -1,6 +1,10 @@
-export default interface Champion{
-    name: String|undefined;
-    src: String|undefined;
-    winrate: String|undefined;
-    gamesCount: String|undefined|null;
+interface Champion{
+    portrait: String|undefined|null;
+    role: String|undefined|null;
+    gamesAnalyzed: String|undefined|null;
+    winrate: String|undefined|null;
+    pickrate: String|undefined|null;
+    banrate: String|undefined|null;
+    name: String|undefined|null;
+    tier: String|undefined|null;
 }

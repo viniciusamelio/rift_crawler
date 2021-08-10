@@ -1,5 +1,5 @@
 # Rift Crawler
-Um projeto de Web Scrapping criado com Typescript e Puppeteer para coletar dados de builds, champions e counter picks 
+Um projeto de Web Scraping criado com Typescript e Puppeteer para coletar dados de builds, champions e counter picks 
 do game League of Legends.
 
 ## Ferramentas
